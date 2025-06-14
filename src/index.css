@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+.div {
+  padding: 50px;
+  border-radius: 20px;
+  background-color: rgb(40, 143, 233);
+}
+
+button {
+  padding: 10px;
+  border-radius: 500px;
+}
