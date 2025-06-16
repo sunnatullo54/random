@@ -62,16 +62,29 @@ function App() {
   };
 
   return (
-    <div className="bg-[#74992e] min-h-screen flex flex-col items-center justify-center" style={{ textAlign: "center", padding: "50px" }}>
-      <div className="border div">
-        <select value={category} onChange={(e) => setCategory(e.target.value)}>
+    <div className="min-h-screen bg-gradient-to-br from-[#fceabb] to-[#f8b500] flex items-center justify-center p-4">
+      <div className="bg-white shadow-xl rounded-3xl p-8 w-full max-w-md text-center space-y-6">
+        <h1 className="text-3xl font-bold text-gray-800">📜 Iqtiboslar</h1>
+
+        <select
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-400 transition text-gray-700"
+        >
           <option value="Motivatsion">Motivatsion</option>
           <option value="hazil">Hazil</option>
           <option value="hayot">Hayot</option>
           <option value="ilmfan">Ilm-fan</option>
         </select>
-        <h2 style={{ marginTop: "30px" }}>{quote}</h2>
-        <button className="border" onClick={getRandomQuote} style={{ marginTop: "20px" }}>
+
+        <h2 className="text-lg text-gray-600 font-medium min-h-[70px] italic">
+          {quote}
+        </h2>
+
+        <button
+          onClick={getRandomQuote}
+          className="bg-orange-500 text-white px-6 py-2 rounded-xl hover:bg-orange-600 transition font-semibold"
+        >
           Yana iqtibos
         </button>
       </div>
